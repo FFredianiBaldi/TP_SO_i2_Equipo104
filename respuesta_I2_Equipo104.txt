@@ -3,5 +3,92 @@ b-¿Puede ALFA actualizar su FORK al estado del fork de GAMMA?
 c-¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
 d-¿Los datos que tenía en mi repositorio , editados por mi, se pierden si quiero actualizar
 el fork?
+
+
+
 e- realizar un listado, paso a paso ,de los comando necesarios para resolver este TP por
 orden de ejecución de los mismos junto con los apellidos y nombre de los alumnos
+
+BETA (Federico Frediani Baldi) comandos:
+	1- Crear un repositorio TP_SO_i2_Equipo104
+	2- Crear un archivo fork.txt 
+		git clone (link repositorio)
+		touch fork.txt
+	3- Actualizacion del repositorio
+		git add fork.txt
+		git commit -m "BETA"
+		gir push
+	
+GAMMA (Karina Ferreyra) comandos:
+	1- Se realiza un fork del repositorio de Beta
+	2- Descarga de forma local del repositorio
+		git clone (link repo)
+	3- modificacion del archivo fork.txt
+		nano fork.txt
+		ingresar los datos
+	4- Actualizar el repositorio (GAMMA)
+		git add .
+		git commit -m "GAMMA"
+		git push
+
+ALFA (Axel Choqueticlla) comandos:
+	
+	1- Se realiza un fork del repositorio de BETA
+	2- Descarga de forma local del repositorio
+		git clone (link repositorio)
+	3- modificacion del archivo fork.txt
+		nano fork.txt 
+		ingresar los datos nombre apellido, IP , hora.
+	4- Actualizar el repositorio (ALFA)
+		git add .
+		git commit -m "ALFA"
+		git push
+BETA 
+	1- Descarga de forma local el repositorio 
+		git clone (link repositorio)
+	2-  Crear un archivo NuevoDato.txt		
+		touch NuevoDato.txt
+	3- Actualiza el repositorio de github
+		git add NuevoDato.txt
+		git commit -m "BETA"
+		git push 
+ALFA
+	1- Actualizar el repositorio al estado de BETA
+		git remote add upstream (linkrepo)
+		git fetch upstream
+		git merge upstream/main
+		git push 
+GAMMA 
+	1- Actualizar el repositorio al estado de BETA
+		git remote add upstream (linkrepo)
+		git fetch upstream
+		git merge upstream/main
+		gir push 
+BETA 
+	1- Crear el nuevo archivo respuesta_I2_Equipo104.txt
+		touch respuesta_I2_Equipo104.txt
+	2- Actualizar el respositorio
+		git add respuesta_I2_Equipo104.txt
+		git commit -m "BETA"
+		git push
+ALFA
+	1- Actualizar el repositorio con el nuevo archivo creado por BETA
+		git fetch upstream
+		git merge upstream/main
+	2- Editar el archivo respuesta_I2_Equipo104.txt
+		nano respuesta_I2_Equipo104.txt
+	3- responder la pregunta asignada a AlFA
+		git add .
+		git commit -m "ALFA"
+		git push
+
+GAMMA 
+	1- Actualizar el repositorio con el nuevo archivo creado por BETA
+		git fetch upstream
+		git merge upstream/main
+	2- Editar el archivo respuesta_I2_Equipo104.txt
+		nano respuesta_I2_Equipo104.txt
+	3- responder la pregunta asignada a GAMMA
+		git add .
+		git commit -m "GAMMA"		
+		git push
